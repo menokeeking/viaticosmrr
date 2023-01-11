@@ -1,0 +1,23 @@
+.navbar{
+    padding: 20px;
+    background-color: #f7f7f7;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+/* .navbar-left{
+    display: flex;
+    align-items: center;
+} */
+
+.navbar-left img{
+    width: 15%;
+    margin-right: 20px;
+}
+
+/* .navbar-left .titulo{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+} */
