@@ -31,7 +31,7 @@ export const ListaViaticos = () => {
     
     {
       name: 'Acciones',
-			cell: (row: any) => <button className="btn btn-primary" 
+			cell: (row: any) => <button className="btn btn-sm btn-secondary" 
                                   onClick={() => alert(row.viatico)}>
                             Editar
                           </button>,
@@ -43,6 +43,9 @@ export const ListaViaticos = () => {
       name: 'No. Viático',
       selector: (row: any)=>  row.viatico,
       sortable: true,
+      
+      width: "80px",
+      
     },
     { 
       name: 'Fecha',
@@ -88,7 +91,8 @@ export const ListaViaticos = () => {
 const customStyles = {
   rows: {
       style: {
-          minHeight: '50px', // override the row height
+          minHeight: '40px', // override the row height
+          
       },
   },
   headCells: {
@@ -111,6 +115,15 @@ const paginacionOpciones ={
   selectAllRowsItem: true,
   selectAllRowsItemText: 'Todos'
 }
+
+createTheme('solarized', {
+  text: {
+    primary: '#767676',
+  },
+  background: {
+    default: 'white',
+  },
+})
   // 4.- Mostramos la data en Datatable
 
   return (
@@ -122,10 +135,12 @@ const paginacionOpciones ={
           customStyles={customStyles}
           data = {users}
           defaultSortFieldId={1}
+          theme="solarized"
           pagination
           paginationComponentOptions={paginacionOpciones}
           fixedHeader
-          fixedHeaderScrollHeight="600px"
+          fixedHeaderScrollHeight="500px"
+          highlightOnHover
        />
        </div>
     </ViaticosLayout>
